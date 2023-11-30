@@ -1,0 +1,17 @@
+import styled from 'styled-components';
+
+export const Container = styled.div`
+  margin: 200px auto;
+  padding: 20px;
+  max-width: 60%;
+
+  text-align: center;
+  background-color: #fdfdfd;
+  border-radius: 8px;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+`;
+
+export const Equals = styled.div`
+  font-size: 28px;
+  font-weight: 500;
+`;
