@@ -8,8 +8,7 @@ import NotFound from './pages/NotFound';
 
 const router = createBrowserRouter([
   {
-    path: '/currency-converter
-',
+    path: '/currency-converter/',
     element: <Root />,
     errorElement: <NotFound />,
     children: [
