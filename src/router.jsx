@@ -7,12 +7,12 @@ import DatePicker from './pages/DatePicker/DatePicker';
 
 const router = createBrowserRouter([
   {
-    path: '/currency-converter/',
+    path: '/',
     element: <Layout />,
 
     children: [
       {
-        path: '/currency-converter/',
+        index: true,
         element: <Converter />,
       },
       {
