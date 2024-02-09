@@ -1,0 +1,16 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input {
+  min-width: 200px;
+  width: fit-content;
+
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 24px;
+
+  background-color: #c2a0f9;
+}

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import CurerencyRow from '../components/CurerencyRow';
+import CurerencyRow from '../../components/CurrencyRow/CurerencyRow';
 
-import { Container, Equals } from './Root.styled';
+import styled from './Converter.module.scss';
 
 export default function Root() {
   const [currencyOptions, setCurrencyOptions] = useState([]);
@@ -65,11 +65,9 @@ export default function Root() {
   };
 
   return (
-    <Container>
-      <h1>Конвертер валют</h1>
-      <p>
-        Введіть суму та оберіть валюту, з якої та в яку бажаєте конвертувати
-      </p>
+    <div className={`container ${styled.box}`}>
+      <h1>Currency converter</h1>
+      <p>Chooose the currency or amount to convert</p>
       <div>
         <CurerencyRow
           currencyOptions={currencyOptions}
@@ -78,7 +76,7 @@ export default function Root() {
           amount={fromAmount}
           onChangeAmount={handleFromAmountChange}
         />
-        <Equals>=</Equals>
+        <p>=</p>
         <CurerencyRow
           currencyOptions={currencyOptions}
           selectedCurrency={toCurrency}
@@ -88,9 +86,9 @@ export default function Root() {
         />
       </div>
       <p>
-        Зверніть увагу, що вказані курси є орієнтовними і дійсні станом на{' '}
-        {date}
+        Be aware that the currency exchange rates are indicative and valid only
+        on {date}
       </p>
-    </Container>
+    </div>
   );
 }
