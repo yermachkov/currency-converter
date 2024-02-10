@@ -4,17 +4,14 @@ import { RouterProvider } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 import { store } from './store/store';
-import router from './router';
+import routes from './routes';
 
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
-      <RouterProvider
-        router={router}
-        basename={'/currency-converter'}
-      />
+      <RouterProvider router={routes} />
     </Provider>
   </React.StrictMode>
 );

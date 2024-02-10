@@ -5,14 +5,14 @@ import Converter from './pages/Converter/Converter';
 import NotFound from './pages/NotFound/NotFound';
 import DatePicker from './pages/DatePicker/DatePicker';
 
-const router = createBrowserRouter([
+const routes = [
   {
-    path: '/currency-converter',
+    path: '/',
     element: <Layout />,
 
     children: [
       {
-        path: '/currency-converter',
+        index: true,
         element: <Converter />,
       },
       {
@@ -26,6 +26,8 @@ const router = createBrowserRouter([
       },
     ],
   },
-]);
+];
+
+const router = createBrowserRouter(routes, { basename: '/currency-converter' });
 
 export default router;
